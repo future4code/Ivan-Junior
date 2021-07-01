@@ -112,11 +112,19 @@ table, img {
 }
 
 td button {
-    background-color: #fadf63;
+    background-color: #ffd932;
     width: 150px;
     height: 30px;
     border-radius: 5px;
     color: black;
+}
+
+button:hover {
+    color: white;
+}
+
+button:active {
+    background: #ccaa14;
 }
 
 .container-do-search {
