@@ -45,7 +45,7 @@ div img {
     font-size: 20px;
     color: white;
     position:relative; 
-    top: 10%;
+    top: 40%;
     right: 20%;
     
 }
@@ -84,6 +84,7 @@ div img {
 
 #container-para-comprar {
     background-color: #e7eb90;
+    text-align: center;
 }
 
 #container-para-comprar>p {
@@ -104,11 +105,16 @@ div:last-child {
     text-align: center;
 }
 
-table, img {
-    width: 60%;
-    width: 50px;
+table {
     height: 50px;
     margin: 2%;
+    padding: 300px;
+    margin: 0 auto;
+}
+
+img {
+    width: 60%;
+    width: 50px;
 }
 
 td button {
@@ -128,8 +134,8 @@ button:active {
 }
 
 .container-do-search {
-    margin-top: 20px;
-    height: 100px;
+    height: 10px;
+    text-align: center;
 }
 
 .icone {
@@ -148,6 +154,7 @@ button:active {
     font-size: 10px;
     color: black;
     text-align: center;
+    margin: 0 auto;
 }
 
 #back-button:hover {
