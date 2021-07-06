@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#navigation {
+    background-color: #4C4C4C;
+    height: 90px;
+    width: 100%;
+    display: flex;
+}
+
+#navigation a, li { 
+    color: #92C638;
+    text-decoration: none;
+    list-style:none;
+    display: block;
+    padding: 15px;
+    margin-left: 120px;
+}
+
+img {
+    margin-left: 200px;
+}
+
+
+
+
