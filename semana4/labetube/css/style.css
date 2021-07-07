@@ -60,15 +60,7 @@ main {
     padding: 25px;
 }
 
-footer {
-    display: flex;
-    background-color: #F9B24E;
-    height: 80px;
-    color: white;
-    align-items: center;
-    justify-content: center;
-}
-
+semana4-aula16
 @media screen and (min-device-width: 320px) and (max-device-width: 480px) {
     
     * {
@@ -122,3 +114,4 @@ footer {
         font-size: 15px;
     }
 }
+
