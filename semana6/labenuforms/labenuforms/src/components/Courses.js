@@ -11,10 +11,10 @@ class Courses extends React.Component {
             <p>6. Qual a unidade de ensino?</p>
             <input type="text" />
 
-            <button>Próxima etapa</button>
+            <button onCLick={this.props.goToFormation}>Próxima etapa</button>
           </div>
-        )
+        );
     }
 }
 
-export default Courses
+export default Courses;

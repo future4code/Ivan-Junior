@@ -11,8 +11,8 @@ class Formation extends React.Component {
            <p>6. Você fez algum curso complementar?</p>
            <input type="text" />
         </div>
-       )
+       );
    }
 }
 
-export default Formation
+export default Formation;

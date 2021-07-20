@@ -22,10 +22,10 @@ class Data extends React.Component {
                <option>Ensino superior completo</option>
             </select>
 
-      <button>Próxima etapa</button>
+      <button onClick={this.props.goToCourses}>Próxima etapa</button>
       </div>
-        )
+        );
     }
 }
 
-export default Data
+export default Data;
