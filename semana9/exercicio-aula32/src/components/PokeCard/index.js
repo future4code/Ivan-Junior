@@ -9,8 +9,8 @@ const PokeCard = (props) => {
 
     const getPokemon = pokeName => {
        axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
-             
             .then(response => {
+                console.log(response.data)
                 setPokemon(response.data)
             })
             .catch(err => {
@@ -25,9 +25,9 @@ const PokeCard = (props) => {
 
     return(
         <div>
-            <p>{pokemon.name}</p>
-            <p>{pokemon.weight} kg</p>
-            {pokemon.types && <p>{pokemon.types[0]}</p>}
+            <p>{pokemon && pokemon.name}</p>
+            <p>{pokemon && pokemon.weight} kg</p>
+            {pokemon.types && pokemon.types[0].type.name}
             {pokemon.sprites && (<img src={pokemon.sprites.front_default} alt={pokemon.name} />)}
         </div>
     )

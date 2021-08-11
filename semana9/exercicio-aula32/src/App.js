@@ -39,12 +39,12 @@ const App = () => {
           <option value={""}>Nenhum</option>
           {pokeList.map((pokemon) => {
             return (
-              <option key={pokemon.name} value={pokemon.name}></option>
+              <option key={pokemon.name} value={pokemon.name}>{pokemon.name}</option>
             )
           })}
       </select>
 
-      {pokeName && <PokeCard pokemon={pokeName}/>}
+      {pokeName && <PokeCard pokeName={pokeName}/>}
     </div>
   )
 }
