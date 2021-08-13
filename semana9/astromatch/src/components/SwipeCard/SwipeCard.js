@@ -1,22 +1,25 @@
-import { ImagemContainer, SwipeCardContainer } from './styled'
+import { Bio, ContainerImage, Title } from './styled'
+import { SwipeCardContainer } from './styled'
+import { ContainerBio } from './styled'
 import Header from '../Header/Header'
-import { ButtonContainer } from './styled'
 import axios from 'axios'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import Footer from '../Footer/Footer'
 
 
+const SwipeCard = (props) => {
 
-const SwipeCard = () => {
-
+    const [profile, setProfile] = useState({})
 
     const getProfileToChoose = () => {
         axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/person")
 
         .then((res) => {
             console.log(res.data)
+            setProfile(res.data.profile)
         })
         .catch((err) => {
-            console.log(err.response.data)
+            console.log(err)
         })
     }
 
@@ -24,20 +27,22 @@ const SwipeCard = () => {
         getProfileToChoose()
     }, [])
 
-    return(
+    return (
         <div>
-        <SwipeCardContainer>
-            <Header />
+            <SwipeCardContainer>
+                <Header goToMatchesPage={props.goToMatchesPage}/>
 
-            <ImagemContainer>
-            </ImagemContainer>
-            <ButtonContainer> 
-                  <button>Dar match</button>
-                  <button>Remover match</button>
-             </ButtonContainer> 
+                <ContainerImage>
+                    <img src={profile.photo} alt={"Imagem"} />
+                </ContainerImage>
 
-        </SwipeCardContainer>
+                <ContainerBio>
+                    <Title>{profile.name}, {profile.age}</Title>
+                    <Bio>{profile.bio}</Bio>
+                </ContainerBio>
 
+                <Footer />
+            </SwipeCardContainer>
         </div>
     )
 }
