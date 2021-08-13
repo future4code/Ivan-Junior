@@ -2,12 +2,12 @@ import styled from "styled-components"
 
 
 export const SwipeCardContainer = styled.div`
-   border: 5px solid black;
+   border: 6px solid #E6E8E8;
    width: 20vw;
-   height: 76vh;
+   height: 78vh;
    box-sizing: border-box;
    border-radius: 30px;
-   background-color: silver;
+   background-color: #FD5068;
 `
 
 export const ContainerImage = styled.div`
@@ -16,6 +16,7 @@ export const ContainerImage = styled.div`
    height: 47vh;
    justify-content: center;
    align-items: center;
+   margin-top: 15px;
 
    img {
       width: 358px;
@@ -42,7 +43,27 @@ export const Title = styled.h4`
 `
 
 export const Bio = styled.p`
-   color: black;
+   color: white;
    margin-left: 20px;
 `
+export const ButtonContainer = styled.div`
+   display: flex;
+   width: 100%;
+   height: 5vh;
+   background-color: #FD5068;
+   border-radius: 10px;
+   justify-content: space-evenly;
 
+button {
+   width: 4vw;
+   height: 5vh;
+   margin: 10px;
+   border-radius: 40px;
+   border: none;
+   background-color: white;
+   cursor: pointer;
+   :active {
+      background-color: #E6E8E8;
+   }
+}
+`

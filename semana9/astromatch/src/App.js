@@ -1,6 +1,6 @@
 import SwipeCard from "./components/SwipeCard/SwipeCard"
 import MatchesPage from './pages/MatchesPage/MatchesPage'
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 import { useState } from "react";
 
 const GlobalStyle = createGlobalStyle`
@@ -15,7 +15,9 @@ const GlobalStyle = createGlobalStyle`
        justify-content: center;
        margin: 100px;
        background-color: grey;
-       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+       background-image: linear-gradient(to top, #FD5068, transparent);
+       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+       font-family: 'Roboto', sans-serif;
    }
 `
 
@@ -42,6 +44,7 @@ const App = () => {
               return <SwipeCard  goToSwipeCard={goToSwipeCard}/>
         }
     }
+
 
     return (
         <div>
