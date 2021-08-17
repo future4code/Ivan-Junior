@@ -1,8 +1,14 @@
+import { Container, ButtonContainer, Button } from "./styledHomePage"
 
 
 const HomePage = () => {
     return (
-        <div>HomePage</div>
+        <Container>            
+            <ButtonContainer>
+                <Button>Ver Viagens</Button>
+                <Button>Área de Admin</Button>
+            </ButtonContainer>
+        </Container>
     )
 }
 
