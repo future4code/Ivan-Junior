@@ -13,31 +13,31 @@ const Router = () => {
     
     <BrowserRouter>
         <Switch>
-           <Route path={"/"}>
+           <Route exact path={"/"}>
               <HomePage/> 
           </Route>
 
-          <Route path={"/trips/list"}>
+          <Route exact path={"/trips/list"}>
              <ListTripsPage/>
           </Route>
 
-          <Route path={"/trips/application"}>
+          <Route exact path={"/trips/application"}>
              <ApplicationFormPage/> 
           </Route>
 
-          <Route path={"/login"}>
+          <Route exact path={"/login"}>
               <LoginPage/> 
           </Route>
 
-          <Route path={"/admin/trips/list"}>
+          <Route exact path={"/admin/trips/list"}>
              <AdminHomePage/>
           </Route>
 
-          <Route path={"/admin/trips/create"}>
+          <Route exact path={"/admin/trips/create"}>
              <CreateTripPage/>
           </Route>
 
-          <Route path={"/admin/trips/:id"}>
+          <Route exact path={"/admin/trips/:id"}>
              <TripDetailsPage/>
           </Route>
 

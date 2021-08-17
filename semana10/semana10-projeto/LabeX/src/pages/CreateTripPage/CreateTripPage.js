@@ -1,8 +1,12 @@
 import { ContainerButton, Title } from "../LoginPage/styledLoginPage"
 import { ContainerForm, ContainerLeft, ContainerRight, ContainerTripPage, Input, Select } from "./styledTripPage"
-
+import { useHistory } from "react-router"
+import { goToAdminHomePage } from "../../routes/condinator"
 
 const CreateTripPage = () => {
+
+    const history = useHistory() 
+
     return (
         <ContainerTripPage>
             <ContainerRight>
@@ -41,8 +45,8 @@ const CreateTripPage = () => {
                     </form>
 
                     <ContainerButton>
-                          <button>Voltar</button>
-                          <button>Entrar</button>
+                          <button onClick={() => goToAdminHomePage(history)}>Voltar</button>
+                          <button>Criar</button>
                     </ContainerButton>
                 </ContainerForm>
             </ContainerRight>

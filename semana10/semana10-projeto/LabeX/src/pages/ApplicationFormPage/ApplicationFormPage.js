@@ -1,8 +1,12 @@
 import { ContainerButton, Title } from "../LoginPage/styledLoginPage"
 import { ContainerApplicationForm, ContainerForm, ContainerLeft, ContainerRight, Input, Select } from "./styledFormPage"
-
+import { useHistory } from "react-router"
+import { goToListTripsPage } from "../../routes/condinator"
 
 const ApplicationFormPage = () => {
+
+    const history = useHistory()
+
     return (
         <ContainerApplicationForm>
                 <ContainerRight>
@@ -42,8 +46,8 @@ const ApplicationFormPage = () => {
                         </Select>
 
                         <ContainerButton>
-                            <button>Voltar</button>
-                            <button>Entrar</button>
+                            <button onClick={() => goToListTripsPage(history)}>Voltar</button>
+                            <button>Enviar</button>
                         </ContainerButton>
                     </ContainerForm>
                 </ContainerRight>

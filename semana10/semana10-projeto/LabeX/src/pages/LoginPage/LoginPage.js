@@ -1,8 +1,12 @@
 import { ContainerButton, ContainerInput, ContainerLeft, ContainerLoginPage, ContainerRight, Input, Title } from "./styledLoginPage"
-
+import { useHistory } from "react-router"
+import { goToHomePage } from "../../routes/condinator"
 
 
 const LoginPage = () => {
+
+    const history = useHistory()
+
     return (
         <ContainerLoginPage>
             <ContainerRight>
@@ -16,7 +20,7 @@ const LoginPage = () => {
                 </ContainerInput>
                  
                 <ContainerButton>
-                    <button>Voltar</button>
+                    <button onClick={() => goToHomePage(history)}>Voltar</button>
                     <button>Entrar</button>
                 </ContainerButton>
             </ContainerRight>
