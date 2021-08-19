@@ -2,9 +2,10 @@ import { ContainerButton, Title } from "../LoginPage/styledLoginPage"
 import { ContainerForm, ContainerLeft, ContainerRight, ContainerTripPage, Input, Select } from "./styledTripPage"
 import { useHistory } from "react-router"
 import { goToAdminHomePage } from "../../routes/condinator"
+import { useProtectedPage } from "../../hooks/useProtectedPage"
 
 const CreateTripPage = () => {
-
+    useProtectedPage()
     const history = useHistory() 
 
     return (
