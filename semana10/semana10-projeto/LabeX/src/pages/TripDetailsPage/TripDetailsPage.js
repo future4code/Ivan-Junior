@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import { useHistory } from "react-router"
 import { goToAdminHomePage } from "../../routes/condinator"
 import { useProtectedPage } from "../../hooks/useProtectedPage"
+import { BASE_URL } from "../../constants/urls"
 
 const TripDetailsPage = () => {
     useProtectedPage()
@@ -11,7 +12,7 @@ const TripDetailsPage = () => {
     useEffect(() => {
         const token = localStorage.getItem("token")
 
-        axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/ivan/trip/KBSCpATtS6iDreB4yShe", {
+        axios.get(`${BASE_URL}/trip/KBSCpATtS6iDreB4yShe`, {
             headers: {
                 auth: token
             }

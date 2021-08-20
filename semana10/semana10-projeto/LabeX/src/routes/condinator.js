@@ -19,7 +19,7 @@ export const goToAdminHomePage = (history) => {
 }
 
 export const goToCreateTripPage = (history) => {
-    history.push("admin/trips/create")
+    history.push("/admin/trips/create")
 }
 
 export const goToTripDetailsPage = (history, id) => {

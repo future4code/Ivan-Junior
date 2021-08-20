@@ -3,26 +3,23 @@ import { useHistory } from "react-router"
 import { goToHomePage } from "../../routes/condinator"
 import axios from "axios"
 import { BASE_URL } from "../../constants/urls"
-import useForm from "../../hooks/useForm"
+import UseForm from "../../hooks/useForm"
 
 const LoginPage = () => {
-    const { form, onChange } = useForm({email: "", password: ""})
+    const { form, onChange } = UseForm({email: "", password: ""})
     
     const history = useHistory()
 
     const OnSubmitLogin = (event) => {
         event.preventDefault()
-        console.log(form)
-
         axios.post(`${BASE_URL}/login`, form)
 
             .then((response) => {
-                console.log('Deu certo', response)
                 localStorage.setItem("token", response.data.token)
                 history.push("/admin/trips/list")
             })
-            .catch((error) => {
-                console.log('Deu errado', error.response)
+            .catch(() => {
+                alert("Ocorreu um erro, tente novamente!")
             })
     }
 
