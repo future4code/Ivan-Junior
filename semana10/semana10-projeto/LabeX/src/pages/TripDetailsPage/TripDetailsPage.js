@@ -11,14 +11,13 @@ const TripDetailsPage = () => {
     useEffect(() => {
         const token = localStorage.getItem("token")
 
-        axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/ivan/trip/6qISYdZkP7Nia5FbQDKL", {
+        axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/ivan/trip/KBSCpATtS6iDreB4yShe", {
             headers: {
                 auth: token
             }
         })
-
         .then((response) => {
-            console.log('Deu certo', response.data.token)
+            console.log('Deu certo', response.data.trip)
         })
         .catch((error) => {
             console.log('Deu errado', error.response)

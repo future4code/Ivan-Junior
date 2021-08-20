@@ -37,6 +37,9 @@ export const Title = styled.div`
    }
 `
 
+export const Form = styled.form`
+`
+
 export const ContainerInput = styled.div`
    width: 20vw;
    height: 20vh;

@@ -7,6 +7,8 @@ import { useProtectedPage } from "../../hooks/useProtectedPage"
 const CreateTripPage = () => {
     useProtectedPage()
     const history = useHistory() 
+     
+    
 
     return (
         <ContainerTripPage>
