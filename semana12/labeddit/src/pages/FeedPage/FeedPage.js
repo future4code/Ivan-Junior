@@ -1,9 +1,11 @@
-
+import Header from "../../components/Header/Header"
 
 
 const FeedPage = () => {
     return (
-        <div>FeedPage</div>
+        <div>
+           <Header />
+        </div>
     )
 }
 
