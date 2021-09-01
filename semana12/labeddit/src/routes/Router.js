@@ -9,7 +9,7 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path={"/login"}>
+                <Route exact path={"/"}>
                     <LoginPage />
                 </Route>
 
@@ -21,7 +21,7 @@ const Router = () => {
                     <PostPage />
                 </Route>
 
-                <Route exact path={"/"}>
+                <Route exact path={"/feed"}>
                     <FeedPage />
                 </Route>
 
