@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const ContainerHeader = styled.div`
+export const ContainerHeader = styled.header`
    display: flex;
    border: 1px solid black;
    height: 7vh;
@@ -24,7 +24,7 @@ export const ContainerInput = styled.div`
    height: 7vh;
    justify-content: center;
    align-items: center;
-   margin-left: 70px;
+   margin-left: 10%;
 
    input {
        width: 30vw;
@@ -40,8 +40,11 @@ export const ContainerButton = styled.div`
    align-items: center;
 
    button {
-       width: 110px;
+       width: 130px;
        height: 40px;
        margin: 15px;
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
    }
 `

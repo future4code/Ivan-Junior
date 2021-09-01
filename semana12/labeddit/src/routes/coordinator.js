@@ -1,5 +1,5 @@
 export const goToLoginPage = (history) => {
-    history.push("/login")
+    history.push("/")
 }
 
 export const goToSignUpPage = (history) => {
@@ -7,7 +7,7 @@ export const goToSignUpPage = (history) => {
 }
 
 export const goToFeedPage = (history) => {
-    history.push("/")
+    history.push("/feed")
 }
 
 export const goToPostPage = (history, id) => {

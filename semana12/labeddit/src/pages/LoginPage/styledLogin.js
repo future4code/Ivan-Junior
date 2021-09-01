@@ -34,6 +34,7 @@ export const Logo = styled.div`
    height: 10vh;
    justify-content: center;
    align-items: center;
+   margin-top: 90px;
 
    p {
       font-size: 30px;
@@ -71,9 +72,10 @@ export const ContainerButton = styled.div`
    height: 10vh;
    justify-content: space-evenly;
    align-items: center;
+   flex-direction: column;
 
    button {
-       width: 150px;
-       height: 40px;
+       width: 280px;
+       height: 50px;
    }
 `

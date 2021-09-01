@@ -1,8 +1,31 @@
 import { ContainerButton, ContainerHeader, ContainerInput, ContainerTitle } from "./styledHeader"
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
+import MeetingRoomIcon from '@material-ui/icons/MeetingRoom'
+import { useState } from "react"
+import { useHistory } from "react-router-dom"
+import { goToFeedPage, goToLoginPage } from "../../routes/coordinator"
+
 
 const Header = () => {
+  const history = useHistory()
+  const token = localStorage.getItem("token")
+  // const [rightButtonText, setRightButtonText] = useState(token ? "Logout" : "Logout" )
+
+  const logout = () => {
+    localStorage.removeItem("token")
+  }
+
+
+  const rightButtonAction = () => {
+    if (token) {
+      logout()
+      goToLoginPage(history)
+    } else {
+        goToFeedPage(history)
+    }
+  }
+
   return (
     <ContainerHeader>
       <ContainerTitle>
@@ -14,8 +37,9 @@ const Header = () => {
       </ContainerInput>
 
       <ContainerButton>
-        <Button variant="contained" color="primary">
-          Sign Up
+        <Button variant="outlined" color="primary" onClick={rightButtonAction}>
+          <MeetingRoomIcon />
+          <p>Logout</p>
         </Button>
       </ContainerButton>
     </ContainerHeader>
