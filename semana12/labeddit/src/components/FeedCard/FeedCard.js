@@ -4,8 +4,8 @@ import IconButton from '@material-ui/core/IconButton';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined';
 
+const FeedCard = (props) => {
 
-const FeedCard = () => {
     return (
         <ContainerMain>
             <ContainerFeed>
@@ -15,7 +15,7 @@ const FeedCard = () => {
                     </ContainerProfile>
 
                     <User>
-                        <p>Bruce</p>
+                        <p>{props.username}</p>
                     </User>
                 </TopBar>
 
@@ -33,7 +33,7 @@ const FeedCard = () => {
                     </Sidebar>
 
                     <ContainerComment>
-                        <p>Nullam sollicitudin vestibulum mollis. Praesent convallis posuere aliquam. Suspendisse in ante sodales, iaculis nisi nec, semper sem. Ut vulputate augue quis elementum euismod. Proin vel lacinia mi, non rutrum nisl. Ut mollis elit velit. In hac habitasse platea dictumst. Phasellus eget gravida lacus. Vivamus tristique, erat nec vestibulum vulputate, lectus metus volutpat justo, at lacinia neque risus quis enim. Proin malesuada auctor felis, sed accumsan nulla gravida nec. Mauris id blandit nibh. Cras porttitor et libero ut dignissim. Sed lectus nunc, commodo non volutpat id, tempus id orci. Morbi aliquet nunc massa, eu venenatis odio consequat et. Donec scelerisque erat turpis, sit amet placerat metus tincidunt maximus. Praesent in diam suscipit elit aliquet pellentesque. Donec et elit tortor. Duis eu turpis quam. </p>
+                        <p>{props.title} </p>
                     </ContainerComment>
                 </ContainerItems>
 
@@ -43,7 +43,7 @@ const FeedCard = () => {
                     </IconButton>
 
                     <ContainerText>
-                        <p>25 comentários</p>
+                        <p>{props.commentCount} comentários</p>
                     </ContainerText>
                 </Footer>
             </ContainerFeed>

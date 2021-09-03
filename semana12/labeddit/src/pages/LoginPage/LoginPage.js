@@ -1,7 +1,8 @@
-import { ContainerLoginPage, ContainerRight, ContainerLeft, Logo } from "./styledLogin"
+import { ContainerLoginPage, ContainerRight, ContainerLeft, Logo, LoginText } from "./styledLogin"
 import React from "react"
 import LoginForm from "./LoginForm"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage"
+import lablogo from "../../assets/lablogo.png"
 
 const LoginPage = () => {
     useUnprotectedPage()
@@ -10,7 +11,8 @@ const LoginPage = () => {
         <ContainerLoginPage>
             <ContainerRight>
                 <Logo>
-                    <p>LabEddit</p>
+                    <img src={lablogo} alt={"Logo"} />
+                    <LoginText>LabEddit</LoginText>
                 </Logo>
 
                 <LoginForm />

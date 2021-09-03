@@ -1,20 +1,27 @@
 import styled from "styled-components"
 
 
+export const ContainerScreen = styled.body`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+`
+
 export const ContainerMain = styled.main`
    display: flex;
-   height: 100vh;
-   justify-content: center;
-   align-items: center;
 `
 export const ContainerFeed = styled.article`
    display: flex;
    border-radius: 3px;
    width: 27vw;
-   height: 50vh;
+   min-height: 50px;
    margin-bottom: 270px;
    flex-direction: column;
    background-color: #ffff;
+   margin: 0;
+   margin-bottom: 10%;
 `
 
 export const TopBar = styled.header`
@@ -55,7 +62,7 @@ export const User = styled.div`
 export const ContainerItems = styled.div`
    display: flex;
    width: 100%;
-   height: 90%;
+   min-height: 50px;
    flex-direction: row;
    align-items: center;
    justify-content: center;
@@ -65,7 +72,7 @@ export const ContainerItems = styled.div`
 export const ContainerComment = styled.span`
   display: flex;
   width: 100%;
-  height: 100%;
+  min-height: 50px;
   margin: 5px;
   justify-content: center;
   align-items: flex-start;
@@ -80,6 +87,7 @@ export const Sidebar = styled.section`
    align-items: center;
    flex-direction: column;
    border-radius: 3px;
+   position: relative;
 
    button {
        width: 40px;
@@ -102,7 +110,7 @@ export const Footer = styled.section`
    border-radius: 3px;
 
 `
-export const ContainerText = styled.div`
+export const ContainerText = styled.section`
    display: flex;
    width: 7vw;
    height: 4vh;

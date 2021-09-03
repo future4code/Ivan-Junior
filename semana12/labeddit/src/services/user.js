@@ -37,3 +37,23 @@ export const signUp = (body, clear, history) => {
         alert(err.response.data)
     })
 }
+
+export const createPost = (body) => {
+    
+    const token = localStorage.setItem("token")
+
+    axios.post(`${BASE_URL}/posts`, body, {
+        headers: {
+            "Content-Type": "application/json",
+            token: token
+        }
+    }) 
+
+    .then((res) => {
+        console.log(res)
+    })
+
+    .catch((err) => {
+        console.log(err)
+    })
+}

@@ -10,14 +10,31 @@ export const ContainerHeader = styled.header`
    box-shadow: 5px 2px 2px 2px rgba(0, 0, 0, 0.2);
 `
 
-export const ContainerTitle = styled.div`
+export const ContainerLogo = styled.div`
    display: flex;
-   border: 1px solid black;
    width: 5vw;
    height: 6vh;
    justify-content: center;
    align-items: center;
+
+   button {
+      width: 170px;
+      height: 60px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: white;
+   }
 `
+export const Logo = styled.div`
+   display: flex;
+   width: 5vw;
+   height: 5vh;
+   margin: 5px;
+   color: #ffff
+`
+
 export const ContainerInput = styled.div`
    display: flex;
    width: 40vw;

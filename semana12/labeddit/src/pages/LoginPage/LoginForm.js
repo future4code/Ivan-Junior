@@ -26,7 +26,7 @@ const LoginForm = () => {
                         <TextField
                             label={"Email"}
                             type={"email"}
-                            variant="outlined"
+                            variant={"outlined"}
                             name={"email"}
                             onChange={onChange}
                             value={form.email}
