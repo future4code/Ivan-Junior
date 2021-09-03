@@ -33,23 +33,6 @@ export const TopBar = styled.header`
    align-items: center;
 `
 
-export const ContainerProfile = styled.div`
-   display: flex;
-   border-radius: 20px;
-   border: 2px solid silver;
-   width: 30px;
-   height: 30px;
-   margin-left: 10px;
-   justify-content: center;
-   align-items: center;
-
-   img {
-      border-radius: 20px;
-      width: 30px;
-      height: 30px;
-   }
-`
-
 export const User = styled.div`
    display: flex;
    width: 7vw;
@@ -62,7 +45,7 @@ export const User = styled.div`
 export const ContainerItems = styled.div`
    display: flex;
    width: 100%;
-   min-height: 50px;
+   height: 30vh;
    flex-direction: row;
    align-items: center;
    justify-content: center;
@@ -72,10 +55,10 @@ export const ContainerItems = styled.div`
 export const ContainerComment = styled.span`
   display: flex;
   width: 100%;
-  min-height: 50px;
+  height: 30vh;
   margin: 5px;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
 `
 
 export const Sidebar = styled.section`

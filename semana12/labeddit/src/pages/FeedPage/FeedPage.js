@@ -10,12 +10,13 @@ const FeedPage = () => {
     useProtectedPage()
 
     const posts = useRequestData([], `${BASE_URL}/posts`)
-    console.log(posts)
+
 
     const feedCard = posts.map((post) => {
         return (
             <FeedCard
                 key={post.id}
+                id={post.id}
                 title={post.title}
                 username={post.username}
                 commentCount={post.commentCount}

@@ -1,30 +1,18 @@
-import { FormPost} from "./styledFeedPost"
-import profile from "../../assets/profile.png"
-import Button from '@material-ui/core/Button'
-import useForm from "../../hooks/useForm"
-import { createPost } from "../../services/user"
-
+import { PostContainer } from "./styledFeedPost"
+import lablogo from "../../assets/lablogo.png"
+import { goToCreatePostPage } from "../../routes/coordinator"
+import TextField from '@material-ui/core/TextField'
+import { useHistory } from "react-router"
 
 const FeedPost = () => {
-
-    const [form, onChange] = useForm({title: "", body: ""})
-    const [textarea] = useForm("")
-
-    const onCreatePost = (event) => {
-        event.preventDefault()
-        createPost(form)
-    }
+    const history = useHistory()
 
     return (
-        <FormPost onSubmit={onCreatePost}>
-            <img src={profile} alt={"Ícone de coruja"} />
+        <PostContainer onClick={() => goToCreatePostPage(history)}>
+            <img src={lablogo} alt={"Ícone de coruja"} />
 
-            <textarea name={"body"} textarea={textarea} value={form.title}/>
-
-            <Button variant="contained" color="primary" type={"submit"}>
-                Postar
-            </Button>
-        </FormPost>
+            <TextField label="Crie um Post" variant="filled" />
+        </PostContainer>
     )
 }
 

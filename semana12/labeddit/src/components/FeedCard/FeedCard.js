@@ -3,17 +3,17 @@ import MessageIcon from '@material-ui/icons/Message';
 import IconButton from '@material-ui/core/IconButton';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined';
+import { goToPostPage } from "../../routes/coordinator";
+import { useHistory } from "react-router";
 
 const FeedCard = (props) => {
 
+    const history = useHistory()
+
     return (
         <ContainerMain>
-            <ContainerFeed>
+            <ContainerFeed onClick={() => goToPostPage(history, props.id)}>
                 <TopBar>
-                    <ContainerProfile>
-                        <img src={"https://assets.b9.com.br/wp-content/uploads/2020/09/Batman-issue86-heder-1280x720.jpg"} alt={"Perfil"} />
-                    </ContainerProfile>
-
                     <User>
                         <p>{props.username}</p>
                     </User>
@@ -39,7 +39,7 @@ const FeedCard = (props) => {
 
                 <Footer>
                     <IconButton>
-                        <MessageIcon />
+                        <MessageIcon onClick={() => goToPostPage(history)} />
                     </IconButton>
 
                     <ContainerText>

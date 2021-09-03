@@ -20,7 +20,7 @@ const SignUpPage = () => {
             </ContainerRight>
 
             <ContainerLeft>
-                  <img src={"https://affixtheme.com/html/xmee/demo/img/figure/bg2-l.jpg"} alt={"Imagem"} />
+                  <img src={"https://images5.alphacoders.com/689/thumb-1920-689055.jpg"} alt={"Imagem"} />
             </ContainerLeft>
         </ContainerLoginPage>
     )

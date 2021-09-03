@@ -1,21 +1,22 @@
 import styled from "styled-components"
 
 
-export const FormPost = styled.form`
+export const PostContainer = styled.form`
    display: flex;
    border: 1px solid silver;
    width: 27vw;
-   height: 30vh;
-   justify-content: space-evenly;
+   height: 10vh;
+   justify-content: space-around;
    align-items: center;
    margin-left: 36.5%;
    margin-top: 8%;
    border-radius: 5px;
    background-color: #ffff;
-   flex-direction: column;
+   cursor: pointer;
 
-  textarea {
-      width: 70%;
-      height: 15vh;
+  input {
+    width: 300px;
+    margin-right: 120px;
+    cursor: pointer;
   }
 `
