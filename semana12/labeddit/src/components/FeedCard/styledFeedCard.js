@@ -45,20 +45,36 @@ export const User = styled.div`
 export const ContainerItems = styled.div`
    display: flex;
    width: 100%;
-   height: 30vh;
-   flex-direction: row;
+   min-height: 50px;
+   flex-direction: flex-start;
    align-items: center;
    justify-content: center;
-   border: 1px solid silver;
 `
 
 export const ContainerComment = styled.span`
   display: flex;
   width: 100%;
-  height: 30vh;
+  min-height: 50px;
   margin: 5px;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
+`
+
+export const ContainerTitle = styled.section`
+  display: flex;
+  width: 17vw;
+  height: 6vh;
+  justify-content: center;
+  margin-bottom: 45px;
+`
+export const ContainerMessage = styled.section`
+  display: flex;
+  width: 90%;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  height: 20vh;
+  flex-direction: column;
 `
 
 export const Sidebar = styled.section`

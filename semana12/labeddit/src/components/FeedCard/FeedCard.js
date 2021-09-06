@@ -1,4 +1,4 @@
-import { ContainerComment, ContainerFeed, ContainerItems, ContainerMain, ContainerProfile, ContainerText, Footer, Sidebar, TopBar, User } from "./styledFeedCard"
+import { ContainerComment, ContainerFeed, ContainerItems, ContainerMain, ContainerMessage, ContainerText, ContainerTitle, Footer, Sidebar, TopBar, User } from "./styledFeedCard"
 import MessageIcon from '@material-ui/icons/Message';
 import IconButton from '@material-ui/core/IconButton';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
@@ -33,7 +33,13 @@ const FeedCard = (props) => {
                     </Sidebar>
 
                     <ContainerComment>
-                        <p>{props.title} </p>
+                        <ContainerTitle>
+                            <p>{props.title} </p>
+                        </ContainerTitle>
+
+                        <ContainerMessage>
+                        <p>{props.body}</p>
+                        </ContainerMessage>
                     </ContainerComment>
                 </ContainerItems>
 

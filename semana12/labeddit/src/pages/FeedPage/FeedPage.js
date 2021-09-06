@@ -22,6 +22,7 @@ const FeedPage = () => {
                 commentCount={post.commentCount}
                 voteSum={post.voteSum}
                 userVote={post.userVote}
+                body={post.body}
             />
         )
 
