@@ -2,12 +2,12 @@ import { HeaderContainer } from "./styledHeader"
 
 
 
-const Header = () => {
+const Header = (props) => {
     return (
         <HeaderContainer>
             <h2>Tarot Club</h2>
 
-            <button>Iniciar Jogo</button>
+            <button onClick={props.renderBackCard}>Iniciar Jogo</button>
         </HeaderContainer>
     )
 }
