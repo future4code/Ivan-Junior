@@ -3,6 +3,7 @@ import { Card, Container } from "./styledTarotCard"
 
 
 const TarotCard = () => {
+
     return (
         <Container>
                 <Card />
