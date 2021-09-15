@@ -1,13 +1,14 @@
 import { HeaderContainer } from "./styledHeader"
 
 
-
 const Header = (props) => {
+
+
     return (
         <HeaderContainer>
             <h2>Tarot Club</h2>
 
-            <button onClick={props.renderBackCard}>Iniciar Jogo</button>
+            <button onClick={props.handleBackCard}>Iniciar Jogo</button>
         </HeaderContainer>
     )
 }

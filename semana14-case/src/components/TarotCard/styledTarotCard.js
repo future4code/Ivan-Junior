@@ -22,14 +22,22 @@ export const Card = styled.section`
    cursor: pointer;
    flex-direction: column;
 
+   /* :hover {
+      transform: scale(0.97);
+   } */
+`
+export const ImgContainer = styled.section`
+   display: flex;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   margin: 10px;
+
    img {
       width: 90%;
       height: 100%;
    }
-
-   /* :hover {
-      transform: scale(0.97);
-   } */
 `
 
 export const Footer = styled.footer`

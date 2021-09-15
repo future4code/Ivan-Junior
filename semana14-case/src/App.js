@@ -15,7 +15,6 @@ const App = () => {
   return (
     <div>
       <GlobalStyle />
-      <Header />
       <TarotCard />
     </div>
   )
