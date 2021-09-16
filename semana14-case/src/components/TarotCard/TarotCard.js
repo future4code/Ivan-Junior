@@ -3,11 +3,14 @@ import useRequestData from "../../hooks/useRequestData"
 import { Card, Container, Footer, ImgContainer } from "./styledTarotCard"
 import Header from "../Header/Header"
 import { useState } from "react"
+import ModalScreen from "../PopUpScreen/ModalScreen."
+
 
 const TarotCard = () => {
     const getTarot = useRequestData([], "tarot.json")
 
     const [backCard, setBackCard] = useState(true)
+    const [showModal, setShowModal] = useState(false)
 
     const handleBackCard = () => {
         if (backCard === true) {
@@ -15,6 +18,10 @@ const TarotCard = () => {
         } else {
             setBackCard(true)
         }
+    }
+
+    const openModal = () => {
+        setShowModal(prev => !prev)
     }
 
     const renderCard = getTarot?.cards?.map((card) => {
@@ -33,7 +40,7 @@ const TarotCard = () => {
 
     const renderBackCard = getTarot?.cards?.map((card) => {
         return (
-            <Card key={card.name}>
+            <Card key={card.name} onClick={openModal}>
                 <ImgContainer>
                     <img src={`${imageBackCard}`} alt={"Imagem da Carta"} />
                 </ImgContainer>
@@ -43,9 +50,10 @@ const TarotCard = () => {
 
     return (
         <div>
-            <Header handleBackCard={handleBackCard}  backCard={backCard}/>
+            <Header handleBackCard={handleBackCard} backCard={backCard} />
             <Container>
                 {backCard ? renderCard : renderBackCard}
+                <ModalScreen showModal={showModal} setShowModal={setShowModal} />
             </Container>
         </div>
     )

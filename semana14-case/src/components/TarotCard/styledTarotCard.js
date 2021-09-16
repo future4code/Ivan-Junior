@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
+
 export const Container = styled.body`
    display: flex;
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
    margin: 50px;
+   height: 100%;
 `
 
 export const Card = styled.section`

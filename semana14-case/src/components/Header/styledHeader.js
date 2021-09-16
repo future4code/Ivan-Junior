@@ -20,5 +20,9 @@ export const HeaderContainer = styled.header`
       display: flex;
       justify-content: center;
       align-items: center;
+
+      :active {
+        background-color: silver;
+      }
   }
 `
