@@ -3,7 +3,7 @@ import useRequestData from "../../hooks/useRequestData"
 import { Card, Container, Footer, ImgContainer } from "./styledTarotCard"
 import Header from "../Header/Header"
 import { useState } from "react"
-import ModalScreen from "../PopUpScreen/ModalScreen."
+import ModalScreen from "../ModalScreen/ModalScreen."
 
 
 const TarotCard = () => {
