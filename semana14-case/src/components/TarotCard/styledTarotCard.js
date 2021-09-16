@@ -49,7 +49,7 @@ export const Footer = styled.footer`
    border-right: 2px solid #f6f41a;
    justify-content: center;
    position: absolute;
-   margin-top: 18%;
+   margin-top: 19%;
    align-items: center;
    background-color: white;
 `

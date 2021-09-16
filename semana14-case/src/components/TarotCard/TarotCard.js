@@ -10,12 +10,16 @@ const TarotCard = () => {
     const [backCard, setBackCard] = useState(true)
 
     const handleBackCard = () => {
-        setBackCard(false)
+        if (backCard === true) {
+            return setBackCard(false)
+        } else {
+            setBackCard(true)
+        }
     }
 
     const renderCard = getTarot?.cards?.map((card) => {
         return (
-            <Card key={card.name} oi>
+            <Card key={card.name}>
                 <ImgContainer>
                     <img src={`${imagesUrl}${card.image}`} alt={"Imagem da Carta"} />
                 </ImgContainer>
@@ -39,7 +43,7 @@ const TarotCard = () => {
 
     return (
         <div>
-            <Header handleBackCard={handleBackCard} />
+            <Header handleBackCard={handleBackCard}  backCard={backCard}/>
             <Container>
                 {backCard ? renderCard : renderBackCard}
             </Container>

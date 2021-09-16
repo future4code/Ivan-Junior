@@ -17,5 +17,8 @@ export const HeaderContainer = styled.header`
       width: 120px;
       height: 30px;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 `
