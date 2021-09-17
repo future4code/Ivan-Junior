@@ -5,7 +5,7 @@ const Header = (props) => {
 
     return (
         <HeaderContainer>
-            <h2>Tarot Club</h2>
+            <h1>Tarot Club</h1>
 
             <button onClick={props.handleBackCard}>{props.backCard ? <p>Iniciar Jogo</p> : <p>Mostrar Cartas</p>} </button>
         </HeaderContainer>
