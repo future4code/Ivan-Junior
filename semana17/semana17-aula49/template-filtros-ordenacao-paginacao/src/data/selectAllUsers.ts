@@ -2,7 +2,7 @@ import { connection } from "./connection"
 
 export default async function selectAllUsers():Promise<any> {
     const result = await connection.raw(`
-       SELECT id, name, email, type
+       SELECT   name
        FROM aula49_exercicio;
     `)
  

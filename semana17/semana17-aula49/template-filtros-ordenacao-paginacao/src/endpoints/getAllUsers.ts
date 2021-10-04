@@ -1,11 +1,12 @@
 import { Request, Response } from "express"
+import { connection } from "../data/connection"
 import selectAllUsers from "../data/selectAllUsers"
 
 
 export const getAllUsers = async(req: Request,res: Response): Promise<void> =>{
     try {
-      const title = req.query.title
-      console.log(title)
+      const user = req.query.user
+      console.log(user)
        const users = await selectAllUsers()
  
        if(!users.length){
